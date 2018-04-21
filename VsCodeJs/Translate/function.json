@@ -1,0 +1,14 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "documents",
+      "type": "cosmosDBTrigger",
+      "direction": "in",
+      "connectionStringSetting": "CosmosDB",
+      "databaseName": "testdb",
+      "collectionName": "testcollection",
+      "createLeaseCollectionIfNotExists": true
+    }
+  ]
+}

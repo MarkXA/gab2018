@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Vs2017CSharp": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "commandLineArgs": "%APPDATA%\\npm\\node_modules\\azure-functions-core-tools\\bin\\func.dll host start",
+      "workingDirectory": "$(TargetDir)"
+    }
+  }
+}
