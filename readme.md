@@ -121,6 +121,10 @@ Once you've got an HTTP triggered function up and running, try building a Functi
         <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.CosmosDB" Version="3.0.0-beta7" />
         <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.13" />
 
+* For Javascript, you'll need to
+
+        func extensions install --package Microsoft.Azure.WebJobs.Extensions.CosmosDB --version 3.0.0-beta7
+
 * Create an setting in local.settings.json with your CosmosDB connection string (get it from the portal, or use `AccountEndpoint=https://localhost:8081;AccountKey=C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==` for the emulator). Use the setting name in the bindings.
 
 * The CosmosDB trigger needs a "lease" collection. The simplest way to enable this is to specify `CreateLeaseCollectionIfNotExists = true` in the binding.

@@ -1,7 +1,6 @@
 {
   "disabled": false,
-  "bindings": [
-    {
+  "bindings": [{
       "name": "documents",
       "type": "cosmosDBTrigger",
       "direction": "in",
@@ -9,6 +8,14 @@
       "databaseName": "testdb",
       "collectionName": "testcollection",
       "createLeaseCollectionIfNotExists": true
+    },
+    {
+      "name": "translated",
+      "type": "documentdb",
+      "direction": "out",
+      "connection": "CosmosDB",
+      "databaseName": "testdb",
+      "collectionName": "testcollection"
     }
   ]
 }
