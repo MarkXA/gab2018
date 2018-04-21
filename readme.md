@@ -95,15 +95,15 @@ That's all you have to do in theory, but because we're using a preview I also re
 
 ## Things to try
 
-Once you've got an HTTP triggered function up and running, try some of these:
+Once you've got an HTTP triggered function up and running, try building a Functions app that "translates" text by having a go at some of these:
 
 * Create a CosmosDB collection.
 
-* Create a `Translate` CosmosDB triggered function that processes new documents in the collection containing a "text" field and adds a "translated" field containing the translated text (can be any transformation you want!).
+* Create a `Translate` CosmosDB triggered function that processes new documents in the collection containing a `text` field and adds a `translated` field containing the translated text (you can try using Cognitive Services if you really want, but any transformation you want will do!).
 
 * Create an `AddText?text={whatever}` function that creates a new document. This should then trigger the `Translate` function.
 
-* Create a `GetText/{id}` function that returns the text field of the document with the provided ID.
+* Create a `GetText/{id}` function that returns the `text` field of the document with the provided ID.
 
 * Create a `GetTranslation?text={whatever}` that returns the translation of the provided text.
 
@@ -131,9 +131,14 @@ Once you've got an HTTP triggered function up and running, try some of these:
 
 ## Useful links
 
+* HTTP binding for Azure Functions: <https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook>
+
 * CosmosDB binding for Azure Functions: <https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb>
 
 * ZIP deployment for Azure Functions: <https://docs.microsoft.com/en-us/azure/azure-functions/deployment-zip-push>
 
 * Durable Functions: <https://github.com/Azure/azure-functions-durable-extension>
 
+* Setting up for local development: <https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local>
+
+* Visual Studio 2017 tools: <https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs>
